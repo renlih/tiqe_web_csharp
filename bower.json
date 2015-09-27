@@ -1,21 +1,12 @@
 {
-  "name": "tiqe-web",
+  "name": "tiqe_web",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.3"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
-  },
-  "devDependencies": {
-    "chai": "~3.3.0",
-    "mocha": "~2.3.3"
+    "bootstrap": "3.0.0",
+    "bootstrap-touch-carousel": "0.8.0",
+    "hammer.js": "2.0.4",
+    "jquery": "2.1.4",
+    "jquery-validation": "1.11.1",
+    "jquery-validation-unobtrusive": "3.2.2"
   }
 }
