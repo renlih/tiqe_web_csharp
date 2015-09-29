@@ -1,28 +1,29 @@
 using System.ComponentModel;
 using System.Reflection;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 public enum Category
 {
-	[DescriptionAttribute("Habitação")]HABITACAO = 1, 
+	[Display(Name="Habitação")]HABITACAO = 1, 
 	
-	[DescriptionAttribute("Transporte")]TRANSPORTE = 2,
+	[Display(Name="Transporte")]TRANSPORTE = 2,
 	
-	[DescriptionAttribute("Saúde")]SAUDE = 3,
+	[Display(Name="Saúde")]SAUDE = 3,
 	
-	[DescriptionAttribute("Educação")]EDUCACAO = 4,
+	[Display(Name="Educação")]EDUCACAO = 4,
 	
-	[DescriptionAttribute("Impostos")]IMPOSTOS = 5,
+	[Display(Name="Impostos")]IMPOSTOS = 5,
 	
-	[DescriptionAttribute("Alimentação")]ALIMENTACAO = 6,
+	[Display(Name="Alimentação")]ALIMENTACAO = 6,
 	
-	[DescriptionAttribute("Cuidados Pessoais")]CUIDADOSPESSOAIS = 7,
+	[Display(Name="Cuidados Pessoais")]CUIDADOSPESSOAIS = 7,
 	
-	[DescriptionAttribute("Manutenção")]MANUTENCAO = 8, 
+	[Display(Name="Manutenção")]MANUTENCAO = 8, 
 	
-	[DescriptionAttribute("Lazer")]LAZER = 9,
+	[Display(Name="Lazer")]LAZER = 9,
 	
-	[DescriptionAttribute("Vestuário")]VESTUARIO = 10,
+	[Display(Name="Vestuário")]VESTUARIO = 10,
 	
-	[DescriptionAttribute("Outros")]OUTROS = 999
+	[Display(Name="Outros")]OUTROS = 999
 }
