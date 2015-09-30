@@ -9,7 +9,6 @@ using Microsoft.AspNet.Authentication.Twitter;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics.Entity;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Dnx.Runtime;
@@ -120,12 +119,6 @@ namespace tiqe_web
             // app.UseMicrosoftAccountAuthentication();
             // app.UseTwitterAuthentication();
 
-            app.Run(async (context) =>
-            {
-                Console.WriteLine("Request for " + context.Request.Path);
-                await context.Response.WriteAsync("Hello World!");
-            });
-            
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
             {

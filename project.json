@@ -1,7 +1,12 @@
 {
   "webroot": "wwwroot",
-  "userSecretsId": "aspnet5-tiqe_web-20fe6283-4365-4fe5-ad91-41881b08514a",
+  "userSecretsId": "aspnet5-tiqe_web-3a908be0-d9c1-41cf-a0c9-8043d6534a88",
   "version": "1.0.0-*",
+  "description": "Tiqe WebApplication",
+  "authors": [ "Giselle Tavares" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
 
   "dependencies": {
     "EntityFramework.SQLite": "7.0.0-beta7",
@@ -26,18 +31,28 @@
     "Microsoft.Framework.Logging": "1.0.0-beta7",
     "Microsoft.Framework.Logging.Console": "1.0.0-beta7",
     "Microsoft.Framework.Logging.Debug" : "1.0.0-beta7",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7"
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7",
+    "xunit": "2.1.0-beta3-build3029",
+    "xunit.runner.dnx": "2.1.0-beta3-build99"
   },
 
   "commands": {
     "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --config hosting.ini",
     "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --config hosting.ini",
-    "ef": "EntityFramework.Commands"
+    "ef": "EntityFramework.Commands",
+    "test": "xunit.runner.dnx"
   },
 
   "frameworks": {
     "dnx451": {},
-    "dnxcore50": {}
+    "dnxcore50" : {
+      "dependencies": {
+        "System.Collections": "4.0.10-beta-22816",
+        "System.Linq": "4.0.0-beta-22816",
+        "System.Threading": "4.0.10-beta-22816",
+        "Microsoft.CSharp": "4.0.0-beta-22816"
+      }
+    }
   },
 
   "exclude": [
