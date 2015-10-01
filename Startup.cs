@@ -38,7 +38,7 @@ namespace tiqe_web
             }
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
-            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}\tiqe_web.db";
+            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/tiqe_web.db";
         }
 
         public IConfigurationRoot Configuration { get; set; }
