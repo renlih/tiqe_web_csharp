@@ -1,6 +1,3 @@
-using System.ComponentModel;
-using System.Reflection;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 public enum Category
@@ -25,5 +22,5 @@ public enum Category
 	
 	[Display(Name="Vestuário")]VESTUARIO = 10,
 	
-	[Display(Name="Outros")]OUTROS = 999
+	[Display(Name="Outra")]OUTRO = 999
 }
