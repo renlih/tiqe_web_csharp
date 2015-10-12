@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum CreditCardFlag{
+public enum CreditCardFlag
+{
 	[Display(Name="Visa")]VISA = 1,
 	[Display(Name="MasterCard")]MASTER = 2,
 	[Display(Name="American Express")]AMEX = 3,

@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum Bank{
+public enum Bank 
+{
 	[Display(Name="Banco ABC Brasil")]ABC = 246,
 	[Display(Name="Banco Alfa")]ALFA = 025,
 	[Display(Name="Banco Andbank")]ANDBANK = 065,

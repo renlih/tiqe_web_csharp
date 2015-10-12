@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum PaymentType {
+public enum PaymentType 
+{
 	[Display(Name="Cartão de Crédito")]CARTAO = 1,
 	[Display(Name="Débito em conta")]DEBITO = 2,
 	[Display(Name="Transferência bancária")]TRANSFERENCIA = 3,

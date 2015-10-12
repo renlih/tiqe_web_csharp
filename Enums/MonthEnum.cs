@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum Month{
+public enum Month
+{
 	[Display(Name="Janeiro")]JAN = 01,
 	[Display(Name="Fevereiro")]FEB = 02,
 	[Display(Name="Março")]MAR = 03,
@@ -12,5 +13,5 @@ public enum Month{
 	[Display(Name="Setembro")]SEP = 09,
 	[Display(Name="Outubro")]OCT = 10,
 	[Display(Name="Novembro")]NOV = 11,
-	[Display(Name="Dezembor")]DEC = 12
+	[Display(Name="Dezembro")]DEC = 12
 }

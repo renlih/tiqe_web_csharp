@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum IncomeType{
+public enum IncomeType
+{
 	[Display(Name="Salário")]SALARIO = 1,
 	[Display(Name="Pensão")]PENSAO = 2,
 	[Display(Name="Aluguel")]ALUGUEL = 3,

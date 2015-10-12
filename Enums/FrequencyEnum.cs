@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum Frequency{
+public enum Frequency
+{
 	[Display(Name="Mensal")]MENSAL = 1,
 	[Display(Name="Diário")]DIARIO = 2,
 	[Display(Name="Semanal")]SEMANAL = 3,

@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-public enum InvestimentType{
+public enum InvestimentType
+{
 	[Display(Name="Poupança")]POUPANCA = 1,
 	[Display(Name="Previdência Privada")]PREVIDENCIA = 2,
 	[Display(Name="Ações")]ACOES = 3,
