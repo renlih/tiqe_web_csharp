@@ -8,20 +8,37 @@ namespace tiqe_web.ViewModels.Account
 {
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "O {0} não pode ficar vazio")]
+        [StringLength(20)]
+        [Display(Name = "Nome")]
+        public string FirstName { get; set; }
+        
+        [Required(ErrorMessage = "O {0} não pode ficar vazio")]
+        [StringLength(20)]
+        [Display(Name = "Sobrenome")]
+        public string LastName { get; set; }
+        
+        [DisplayAttribute(Name = "Data de nascimento")]
+        public DateTime Birthday { get; set; }
+        
         [Required]
+        [StringLength(100)]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "A {0} deve ter no mínimo {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Senha")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Confirme a senha")]
+        [Compare("Password", ErrorMessage = "A senha e a confirmação da senha não são iguais. Tente novamente.")]
         public string ConfirmPassword { get; set; }
+        
+        [Required]
+        public bool UseTerms { get; set; }
     }
 }

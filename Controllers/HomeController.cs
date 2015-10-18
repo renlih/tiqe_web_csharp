@@ -10,6 +10,7 @@ namespace tiqe_web.Controllers
     {
         public IActionResult Index()
         {
+            //codigo da regra de negocio
             return View();
         }
 
