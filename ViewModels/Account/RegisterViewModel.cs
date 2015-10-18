@@ -38,7 +38,8 @@ namespace tiqe_web.ViewModels.Account
         [Compare("Password", ErrorMessage = "A senha e a confirmação da senha não são iguais. Tente novamente.")]
         public string ConfirmPassword { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "É necessário aceitar os termos de uso para se registrar na aplicação.")]
+        [DisplayAttribute(Name="Aceitar os termos de uso")]
         public bool UseTerms { get; set; }
     }
 }
