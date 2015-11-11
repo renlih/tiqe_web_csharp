@@ -1,7 +1,7 @@
 {
 	"Data": {
 		"DefaultConnection": {
-			"ConnectionString": "Server=localhost; Database=BD_tiqe_app; Uid=root; Pwd=ti@3_DoneByGi;"
+			"ConnectionString": "Server=localhost; Database=BD_tiqe_app; Uid=root; Pwd=ti@3_DoneByGi; Trusted_Connection=true; MultipleActiveResultSets=true;"
 		}
 	}
 }
