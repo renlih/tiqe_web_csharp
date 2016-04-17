@@ -2157,7 +2157,7 @@
           "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
         }
       },
-      "MySql.Data/6.9.7": {
+      "MySql.Data/6.9.8": {
         "type": "package",
         "compile": {
           "lib/net45/MySql.Data.dll": {}
@@ -2166,11 +2166,22 @@
           "lib/net45/MySql.Data.dll": {}
         }
       },
-      "MySql.Data.Entity/6.9.7": {
+      "MySql.Data.Entities.EF6/6.8.1-alpha2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {},
+          "lib/net45/MySql.Data.Entity.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {},
+          "lib/net45/MySql.Data.Entity.EF6.dll": {}
+        }
+      },
+      "MySql.Data.Entity/6.9.8": {
         "type": "package",
         "dependencies": {
           "EntityFramework": "6.0.0",
-          "MySql.Data": "6.9.7"
+          "MySql.Data": "6.9.8"
         },
         "compile": {
           "lib/net45/MySql.Data.Entity.EF6.dll": {}
@@ -4426,14 +4437,17 @@
           "lib/DNXCore50/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "MySql.Data/6.9.7": {
+      "MySql.Data/6.9.8": {
         "type": "package"
       },
-      "MySql.Data.Entity/6.9.7": {
+      "MySql.Data.Entities.EF6/6.8.1-alpha2": {
+        "type": "package"
+      },
+      "MySql.Data.Entity/6.9.8": {
         "type": "package",
         "dependencies": {
           "EntityFramework": "6.0.0",
-          "MySql.Data": "6.9.7"
+          "MySql.Data": "6.9.8"
         }
       },
       "Newtonsoft.Json/6.0.6": {
@@ -7877,9 +7891,9 @@
         "ref/net46/Microsoft.Win32.Registry.dll"
       ]
     },
-    "MySql.Data/6.9.7": {
+    "MySql.Data/6.9.8": {
       "type": "package",
-      "sha512": "ugpH3iQUH8HltnG62oUaN/3aeGG56BFeTAh381DjEzz9CSx/99y4rUvWFmt84WhecGi7p0Lh6yWg+QGQ4rgjGQ==",
+      "sha512": "ZSkMKsB1J9Cb/nO3+GlfX/YttibU23y5ZQtn/xzzl3xfPK512wP1jNjiVG4AFvmeJrf02qHNc/GfXJGYYHN8Pg==",
       "files": [
         "CHANGES",
         "content/app.config.transform",
@@ -7888,23 +7902,39 @@
         "lib/net20-cf/MySql.Data.CF.dll",
         "lib/net40/MySql.Data.dll",
         "lib/net45/MySql.Data.dll",
-        "MySql.Data.6.9.7.nupkg",
-        "MySql.Data.6.9.7.nupkg.sha512",
+        "MySql.Data.6.9.8.nupkg",
+        "MySql.Data.6.9.8.nupkg.sha512",
         "MySql.Data.nuspec",
         "Readme.txt"
       ]
     },
-    "MySql.Data.Entity/6.9.7": {
+    "MySql.Data.Entities.EF6/6.8.1-alpha2": {
       "type": "package",
-      "sha512": "hYx+WoyysYQ7lt0Ty8ybh1A4zWUON0+7Sj6UxQ3vSWsEww4x1F0ruaGqEOTV8b8T/5ui3NyqXD8x+PN4jzvQFw==",
+      "sha512": "o/k0zbtogQW9iowRF4ff6opPNOZnQsvY6WfxISpD1EAMPAadGMMVFjQSqi4Di2u193n+0TeYtmgHadni5M+eOg==",
+      "files": [
+        "lib/net20/MySql.Data.dll",
+        "lib/net20/MySql.Data.Entity.dll",
+        "lib/net40/MySql.Data.dll",
+        "lib/net40/MySql.Data.Entity.dll",
+        "lib/net40/MySql.Data.Entity.EF6.dll",
+        "lib/net45/MySql.Data.dll",
+        "lib/net45/MySql.Data.Entity.EF6.dll",
+        "MySql.Data.Entities.EF6.6.8.1-alpha2.nupkg",
+        "MySql.Data.Entities.EF6.6.8.1-alpha2.nupkg.sha512",
+        "MySql.Data.Entities.EF6.nuspec"
+      ]
+    },
+    "MySql.Data.Entity/6.9.8": {
+      "type": "package",
+      "sha512": "jdMn+++xLDtdrTy4QYIWWoIsf2EGC4UACEkPcvWloD9Zty5KmlY8Zee9csJB9BpO3mlGzSNzc15vJmrg/Vv1vQ==",
       "files": [
         "CHANGES",
         "content/app.config.transform",
         "content/web.config.transform",
         "lib/net40/MySql.Data.Entity.EF6.dll",
         "lib/net45/MySql.Data.Entity.EF6.dll",
-        "MySql.Data.Entity.6.9.7.nupkg",
-        "MySql.Data.Entity.6.9.7.nupkg.sha512",
+        "MySql.Data.Entity.6.9.8.nupkg",
+        "MySql.Data.Entity.6.9.8.nupkg.sha512",
         "MySql.Data.Entity.nuspec",
         "Readme.txt"
       ]
@@ -10558,7 +10588,9 @@
       "EntityFramework.SQLite >= 7.0.0-beta7",
       "EntityFramework.Commands >= 7.0.0-beta7",
       "EntityFramework >= 6.1.3",
-      "MySql.Data.Entity >= 6.9.7",
+      "MySql.Data >= 6.9.8",
+      "MySql.Data.Entity >= 6.9.8",
+      "MySql.Data.Entities.EF6 >= 6.8.1-alpha2",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta7",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-beta7",
       "Microsoft.AspNet.Authentication.Cookies >= 1.0.0-beta7",
@@ -10584,7 +10616,11 @@
       "xunit >= 2.1.0-beta3-build3029",
       "xunit.runner.dnx >= 2.1.0-beta3-build99"
     ],
-    "DNX,Version=v4.5.1": [],
+    "DNX,Version=v4.5.1": [
+      "fx/System.Data >= 4.0.0.0",
+      "fx/System.Data.Entity.Repository >= 2.0.0.1",
+      "fx/System.configuration >= 4.0.0.0"
+    ],
     "DNXCore,Version=v5.0": [
       "System.Collections >= 4.0.10-beta-22816",
       "System.Linq >= 4.0.0-beta-22816",
