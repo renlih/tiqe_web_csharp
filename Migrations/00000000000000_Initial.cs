@@ -8,6 +8,22 @@ namespace tiqe_web.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            //novas tabelas daqui
+            migrationBuilder.CreateTable(
+                name: "TB_User",
+                columns: table => new{
+                    Id
+                }
+            )
+            
+            
+            
+            
+            //novas tabelas até aqui
+            
+            
+            
+            //daqui para baixo é para apagar posteriormente
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
