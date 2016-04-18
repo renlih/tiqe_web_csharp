@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace tiqe_web.Models
 {
-	public class User
+	[Table("TB_User")]
+    public class User
 	{
         public int Id_TiqeUser { get; set; }
         
