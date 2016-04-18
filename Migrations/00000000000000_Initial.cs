@@ -12,9 +12,26 @@ namespace tiqe_web.Migrations
             migrationBuilder.CreateTable(
                 name: "TB_User",
                 columns: table => new{
-                    Id
-                }
-            )
+                    ID_TiqeUser = table.Column<int>(isNullable: false),
+                    Picture = table.Column<string>(isNullable: true),
+                    FirstName = table.Column<string>(isNullable: false),
+                    LastName = table.Column<string>(isNullable: false),
+                    Email = table.Column<string>(isNullable: false),
+                    Pass = table.Column<string>(isNullable: false),
+                    Birthday = table.Column<DateTimeOffset>(isNullable: true),
+                    UseTerms = table.Column<bool>(isNullable: false),
+                    Status = table.Column<bool>(isNullable: false),
+                    FirstLogin = table.Column<bool>(isNullable: false),
+                    Language = table.Column<string>(isNullable: false),
+                    SendLogErros = table.Column<bool>(isNullable: false),
+                    RegisterDate = table.Column<DateTimeOffset>(isNullable: false),
+                    ModifyDate = table.Column<DateTimeOffset>(isNullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IdentityUser", x => x.ID_TiqeUser);
+                });
+            
             
             
             
