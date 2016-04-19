@@ -18,14 +18,14 @@ namespace tiqe_web.Migrations
                     LastName = table.Column<string>(isNullable: false),
                     Email = table.Column<string>(isNullable: false),
                     Pass = table.Column<string>(isNullable: false),
-                    Birthday = table.Column<DateTimeOffset>(isNullable: true),
+                    Birthday = table.Column<DateTime>(isNullable: true),
                     UseTerms = table.Column<bool>(isNullable: false),
                     Status = table.Column<bool>(isNullable: false),
                     FirstLogin = table.Column<bool>(isNullable: false),
                     Language = table.Column<string>(isNullable: false),
                     SendLogErros = table.Column<bool>(isNullable: false),
-                    RegisterDate = table.Column<DateTimeOffset>(isNullable: false),
-                    ModifyDate = table.Column<DateTimeOffset>(isNullable: false)
+                    RegisterDate = table.Column<DateTime>(isNullable: false),
+                    ModifyDate = table.Column<DateTime>(isNullable: false)
                 },
                 constraints: table =>
                 {

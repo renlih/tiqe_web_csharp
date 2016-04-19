@@ -52,7 +52,8 @@ namespace tiqe_web
             services.AddEntityFramework()
                 .AddSqlite()
                 .AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    options.MySql(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    //options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.
             services.AddIdentity<ApplicationUser, IdentityRole>()
