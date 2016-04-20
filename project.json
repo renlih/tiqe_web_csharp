@@ -9,7 +9,7 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "EntityFramework.SQLite": "7.0.0-rc1-final",
+    "EntityFramework.Sqlite": "7.0.0-rc1-final",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework": "7.0.0-beta4",
     "MySql.Data": "7.0.2-dmr",
@@ -58,8 +58,7 @@
       "frameworkAssemblies": {
         "System.Data": "4.0.0.0",
         "System.Data.Entity.Repository": "2.0.0.1",
-        "System.configuration": "4.0.0.0",
-        
+        "System.configuration": "4.0.0.0"
       }
     },
     "dnxcore50" : {
