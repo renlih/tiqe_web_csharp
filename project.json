@@ -58,7 +58,8 @@
       "frameworkAssemblies": {
         "System.Data": "4.0.0.0",
         "System.Data.Entity.Repository": "2.0.0.1",
-        "System.configuration": "4.0.0.0"
+        "System.configuration": "4.0.0.0",
+        
       }
     },
     "dnxcore50" : {
