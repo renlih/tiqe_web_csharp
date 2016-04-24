@@ -13,9 +13,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Dnx.Runtime;
-using Microsoft.Framework.Configuration;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Logging;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using tiqe_web.Models;
 using tiqe_web.Services;
 
@@ -50,10 +50,11 @@ namespace tiqe_web
         {
             // Add Entity Framework services to the services container.
             services.AddEntityFramework()
-                .AddSqlite()
+                //.AddSqlite()
+                .AddNpgsql()
                 .AddDbContext<ApplicationDbContext>(options =>
-                    //options.MySql(Configuration["Data:DefaultConnection:ConnectionString"]));
-                    options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    //options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    options.UseNpgsql(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -103,7 +104,7 @@ namespace tiqe_web
             // Add the following to the request pipeline only in development environment.
             if (env.IsDevelopment())
             {
-                app.UseErrorPage();
+                app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage(DatabaseErrorPageOptions.ShowAll);
             }
             else
