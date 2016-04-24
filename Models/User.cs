@@ -1,4 +1,7 @@
 using System;
+using System.Linq;
+using Microsoft.Data.Entity;
+using Microsoft.Extensions.DependencyInjection;
 using System.ComponentModel.DataAnnotations;
 
 namespace tiqe_web.Models
