@@ -22239,6 +22239,7 @@
       "fx/System.Data ",
       "fx/System.Data.Entity.Repository >= 2.0.0.1",
       "fx/System.Runtime ",
+      "fx/System.Runtime.Remoting.Contexts ",
       "fx/System.Collections ",
       "fx/System.Configuration ",
       "fx/Microsoft.AspNet ",

@@ -53,6 +53,7 @@
         "System.Data": "",
         "System.Data.Entity.Repository": "2.0.0.1",
         "System.Runtime": "",
+        "System.Runtime.Remoting.Contexts": "",
         "System.Collections": "",
         "System.Configuration": "",
         "Microsoft.AspNet": "",

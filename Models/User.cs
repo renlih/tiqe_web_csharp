@@ -1,15 +1,14 @@
 using System;
-using System.Linq;
-using Microsoft.Data.Entity;
-using Microsoft.Extensions.DependencyInjection;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace tiqe_web.Models
 {
-	[Table("TB_User")]
+    [Table("TB_User")]
     public class User
 	{
-        public int Id_TiqeUser { get; set; }
+        [Column("ID_TiqeUser")]
+        public int Id { get; set; }
         
         [StringLength(300)]
         public string Picture { get; set; }
