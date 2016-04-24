@@ -40,7 +40,7 @@ namespace tiqe_web
             builder.AddEnvironmentVariables();
             //ver se mantem essas duas linhas
             Configuration = builder.Build();
-            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/tiqe_web.db";
+            //Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/tiqe_web.db";
         }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -52,6 +52,7 @@ namespace tiqe_web
             services.AddEntityFramework()
                 .AddSqlite()
                 .AddDbContext<ApplicationDbContext>(options =>
+                    //options.MySql(Configuration["Data:DefaultConnection:ConnectionString"]));
                     options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.

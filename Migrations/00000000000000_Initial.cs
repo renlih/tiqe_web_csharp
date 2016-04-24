@@ -8,14 +8,47 @@ namespace tiqe_web.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            //novas tabelas daqui
+            migrationBuilder.CreateTable(
+                name: "TB_User",
+                columns: table => new{
+                    ID_TiqeUser = table.Column<int>(nullable: false),
+                    Picture = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Pass = table.Column<string>(nullable: false),
+                    Birthday = table.Column<DateTime>(nullable: true),
+                    UseTerms = table.Column<bool>(nullable: false),
+                    Status = table.Column<bool>(nullable: false),
+                    FirstLogin = table.Column<bool>(nullable: false),
+                    Language = table.Column<string>(nullable: false),
+                    SendLogErros = table.Column<bool>(nullable: false),
+                    RegisterDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IdentityUser", x => x.ID_TiqeUser);
+                });
+            
+            
+            
+            
+            
+            //novas tabelas até aqui
+            
+            
+            
+            //daqui para baixo é para apagar posteriormente
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(isNullable: false),
-                    ConcurrencyStamp = table.Column<string>(isNullable: true),
-                    Name = table.Column<string>(isNullable: true),
-                    NormalizedName = table.Column<string>(isNullable: true)
+                    Id = table.Column<string>(nullable: false),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
+                    NormalizedName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -25,21 +58,21 @@ namespace tiqe_web.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(isNullable: false),
-                    AccessFailedCount = table.Column<int>(isNullable: false),
-                    ConcurrencyStamp = table.Column<string>(isNullable: true),
-                    Email = table.Column<string>(isNullable: true),
-                    EmailConfirmed = table.Column<bool>(isNullable: false),
-                    LockoutEnabled = table.Column<bool>(isNullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(isNullable: true),
-                    NormalizedEmail = table.Column<string>(isNullable: true),
-                    NormalizedUserName = table.Column<string>(isNullable: true),
-                    PasswordHash = table.Column<string>(isNullable: true),
-                    PhoneNumber = table.Column<string>(isNullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(isNullable: false),
-                    SecurityStamp = table.Column<string>(isNullable: true),
-                    TwoFactorEnabled = table.Column<bool>(isNullable: false),
-                    UserName = table.Column<string>(isNullable: true)
+                    Id = table.Column<string>(nullable: false),
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    EmailConfirmed = table.Column<bool>(nullable: false),
+                    LockoutEnabled = table.Column<bool>(nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    NormalizedEmail = table.Column<string>(nullable: true),
+                    NormalizedUserName = table.Column<string>(nullable: true),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    SecurityStamp = table.Column<string>(nullable: true),
+                    TwoFactorEnabled = table.Column<bool>(nullable: false),
+                    UserName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -49,11 +82,11 @@ namespace tiqe_web.Migrations
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(isNullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ClaimType = table.Column<string>(isNullable: true),
-                    ClaimValue = table.Column<string>(isNullable: true),
-                    RoleId = table.Column<string>(isNullable: true)
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true),
+                    RoleId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -68,11 +101,11 @@ namespace tiqe_web.Migrations
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(isNullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ClaimType = table.Column<string>(isNullable: true),
-                    ClaimValue = table.Column<string>(isNullable: true),
-                    UserId = table.Column<string>(isNullable: true)
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -87,10 +120,10 @@ namespace tiqe_web.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(isNullable: false),
-                    ProviderKey = table.Column<string>(isNullable: false),
-                    ProviderDisplayName = table.Column<string>(isNullable: true),
-                    UserId = table.Column<string>(isNullable: true)
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
+                    ProviderDisplayName = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -105,8 +138,8 @@ namespace tiqe_web.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(isNullable: false),
-                    RoleId = table.Column<string>(isNullable: false)
+                    UserId = table.Column<string>(nullable: false),
+                    RoleId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
