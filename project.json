@@ -9,7 +9,6 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "EntityFramework.Sqlite": "7.0.0-rc1-final",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework7.Npgsql": "3.1.0-rc1-3",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
@@ -23,9 +22,7 @@
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
     "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Server.IIS": "1.0.0-beta7",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Server.WebListener": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Razor": "4.0.0-rc1-final",
     "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
@@ -44,7 +41,7 @@
 
   "commands": {
     "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --config hosting.ini",
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --config hosting.ini",
+    "web": "Microsoft.AspNet.Server.Kestrel",
     "ef": "EntityFramework.Commands",
     "test": "xunit.runner.dnx"
   },
