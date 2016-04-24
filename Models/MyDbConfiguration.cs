@@ -1,8 +1,5 @@
 using System.Configuration;
 using System.Data;
-using System.Data.Entity;
-using MySql.Data.Entity;
-using MySql.Data.MySqlClient;
 
 namespace tiqe_web.Models
 {

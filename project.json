@@ -22,7 +22,9 @@
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
     "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "Microsoft.AspNet.Server.IIS": "1.0.0-beta7",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.Server.WebListener": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Razor": "4.0.0-rc1-final",
@@ -30,17 +32,14 @@
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Extensions.CodeGenerators.Mvc": "1.0.0-rc1-final", 
     "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
-    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta8",
-    "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
-    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta8",
-    "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4",
-    "Microsoft.Framework.Logging": "1.0.0-beta8",
-    "Microsoft.Framework.Logging.Console": "1.0.0-beta8",
-    "Microsoft.Framework.Logging.Debug" : "1.0.0-beta8",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging.Debug" : "1.0.0-rc1-final",
+    "Newtonsoft.Json": "8.0.3",
     "xunit": "2.2.0-beta1-build3239",
-    "xunit.runner.dnx": "2.1.0-rc1-build204",
-    "Newtonsoft.Json": "8.0.3"
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
   },
 
   "commands": {
@@ -54,7 +53,7 @@
     "dnx451": {
       "frameworkAssemblies": {
         "System": "",
-        "System.Data": "4.0.0.0",
+        "System.Data": "",
         "System.Data.Entity.Repository": "2.0.0.1",
         "System.Runtime": "",
         "System.Collections": "",

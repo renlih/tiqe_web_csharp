@@ -1,5 +1,5 @@
-using System.Data.Entity;
-using Microsoft.Framework.Configuration;
+using System.Data;
+using Microsoft.Extensions.Configuration;
 using tiqe_web.Models;
 
 namespace tiqe_web.Models
