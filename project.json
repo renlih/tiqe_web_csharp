@@ -11,7 +11,6 @@
   "dependencies": {
     "EntityFramework.Sqlite": "7.0.0-rc1-final",
     "EntityFramework.Commands": "7.0.0-rc1-final",
-    "EntityFramework": "7.0.0-beta4",
     "EntityFramework7.Npgsql": "3.1.0-rc1-3",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
     "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
@@ -55,7 +54,7 @@
     "dnx451": {
       "frameworkAssemblies": {
         "System": "",
-        "System.Data": "",
+        "System.Data": "4.0.0.0",
         "System.Data.Entity.Repository": "2.0.0.1",
         "System.Runtime": "",
         "System.Collections": "",

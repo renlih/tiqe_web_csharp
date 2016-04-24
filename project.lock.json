@@ -3,12 +3,6 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -2634,12 +2628,6 @@
       }
     },
     "DNXCore,Version=v5.0": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -5979,12 +5967,6 @@
       }
     },
     "DNX,Version=v4.5.1/osx.10.11-x86": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -8610,12 +8592,6 @@
       }
     },
     "DNX,Version=v4.5.1/osx.10.11-x64": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -11244,12 +11220,6 @@
       }
     },
     "DNXCore,Version=v5.0/osx.10.11-x86": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -14589,12 +14559,6 @@
       }
     },
     "DNXCore,Version=v5.0/osx.10.11-x64": {
-      "EntityFramework/7.0.0-beta4": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-beta4"
-        }
-      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -18412,20 +18376,6 @@
     }
   },
   "libraries": {
-    "EntityFramework/7.0.0-beta4": {
-      "type": "package",
-      "sha512": "KTplgz4PBKb33t8O0I5S8yBwkU+l9PTymzoTVav8/FGikck55Amf28EOpOZAqnkGIzCGYD5/k26P7AmVyYyTHw==",
-      "files": [
-        "caution.png",
-        "content/deleteme",
-        "EntityFramework.7.0.0-beta4.nupkg",
-        "EntityFramework.7.0.0-beta4.nupkg.sha512",
-        "EntityFramework.nuspec",
-        "readme.html",
-        "tools/install.ps1",
-        "yes.png"
-      ]
-    },
     "EntityFramework.Commands/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -24757,7 +24707,6 @@
     "": [
       "EntityFramework.Sqlite >= 7.0.0-rc1-final",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
-      "EntityFramework >= 7.0.0-beta4",
       "EntityFramework7.Npgsql >= 3.1.0-rc1-3",
       "Microsoft.AspNet.Mvc >= 6.0.0-rc1-final",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-rc1-final",
@@ -24791,7 +24740,7 @@
     ],
     "DNX,Version=v4.5.1": [
       "fx/System ",
-      "fx/System.Data ",
+      "fx/System.Data >= 4.0.0",
       "fx/System.Data.Entity.Repository >= 2.0.0.1",
       "fx/System.Runtime ",
       "fx/System.Collections ",
