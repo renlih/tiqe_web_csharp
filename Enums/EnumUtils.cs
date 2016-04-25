@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Reflection;
 public class EnumUtils
 { 
-    public static string stringValueOf(Enum value) 
+    /*public static string stringValueOf(Enum value) 
     { 
         FieldInfo fi = value.GetType().GetField(value.ToString()); 
         DescriptionAttribute[] attributes = (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false); 
@@ -29,5 +29,5 @@ public class EnumUtils
         } 
 
         throw new ArgumentException("The string is not a description or value of the specified enum."); 
-    } 
+    }*/
 }
