@@ -1,6 +1,4 @@
 using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Infrastructure;
-using Microsoft.Data.Entity.Metadata;
 
 namespace tiqe_web.Models
 {
