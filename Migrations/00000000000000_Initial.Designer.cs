@@ -3,9 +3,10 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using tiqe_web.Models;
 
+//ver como isso funciona direitinho
 namespace tiqe_web.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(TiqeDbContext))]
     partial class Initial
     {
         //public override string Id

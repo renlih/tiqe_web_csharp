@@ -2,7 +2,8 @@ using Microsoft.Data.Entity;
 
 namespace tiqe_web.Models
 {
-    public class UserDbContext : DbContext
+    //criar uma classe dessa para cada tabela
+	public class UserDbContext : DbContext
 	{
 		public DbSet<User> Users { get; set; }
 		

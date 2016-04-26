@@ -30,7 +30,7 @@ namespace tiqe_web.Models
             
             var configuration = builder.Build();
             
-            var sqlConnectionString = configuration["DataAccessPostgreSqlProvider:ConnectionString"];
+            var sqlConnectionString = configuration["Data:DataAccessPostgreSqlProvider:ConnectionString"];
             
             optionsBuilder.UseNpgsql(sqlConnectionString);
 		}
