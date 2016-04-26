@@ -28,8 +28,26 @@ namespace tiqe_web.Migrations
                 },
                 constraints: table =>
                 {
+                    //esse PK_IdentityRole não é o da aplicação. ver como isso funciona.
                     table.PrimaryKey("PK_IdentityUser", x => x.TiqeUserId);
                 });
+                
+            migrationBuilder.CreateTable(
+                name: "TB_UserNewsletter",
+                columns: table => new{
+                    UserNewsletterId = table.Column<int>(nullable: false),
+                    TiqeUserId = table.Column<int>(nullable: false),
+                    Receiver = table.Column<bool>(nullable: false),
+                    ReceiverRegisterDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    //esse PK_IdentityRole não é da aplicação. ver como isso funciona.
+                    table.PrimaryKey("PK_IdentityRole")
+                }       
+                );
+             
             
             
             

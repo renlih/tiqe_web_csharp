@@ -13,7 +13,7 @@ namespace tiqe_web.Migrations
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-beta7-15178");
-
+            
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
                 {
                     b.Property<string>("Id");
