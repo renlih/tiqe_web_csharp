@@ -8,7 +8,7 @@ namespace tiqe_web.Models
 {
     public class DataAccessPostgreSqlProvider : IDataAccessProvider
     {
-        private readonly TiqeDbContext _context;
+        public readonly TiqeDbContext _context;
         private readonly ILogger _logger;
         
         public DataAccessPostgreSqlProvider(TiqeDbContext context, ILoggerFactory loggerFactory){

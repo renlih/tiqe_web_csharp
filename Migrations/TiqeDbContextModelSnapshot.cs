@@ -6,7 +6,7 @@ using tiqe_web.Models;
 //ver como isso funciona direitinho
 namespace tiqe_web.Migrations
 {
-    [DbContext(typeof(TiqeDbContext))]
+    /*[DbContext(typeof(TiqeDbContext))]
     partial class TiqeDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -178,5 +178,5 @@ namespace tiqe_web.Migrations
                         .HasForeignKey("UserId");
                 });
         }
-    }
+    }*/
 }

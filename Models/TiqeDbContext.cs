@@ -9,14 +9,18 @@ namespace tiqe_web.Models
 	{
 		//criar uma classe dessa para cada tabela. deixar essa aqui para que seja herdada.
         public DbSet<User> Users { get; set; }
+        public DbSet<UserNewsletter> UserNewsletters { get; set; }
         //colocar as demais tabelas aqui
 		
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<User>().HasKey(m => m.TiqeUserId);
+            builder.Entity<UserNewsletter>().HasKey(m => m.UserNewsletterId);
             //colocar as demais tabelas aqui
             
+            //entender melhor como funciona essa parte
             builder.Entity<User>().Property<DateTime>("UpdatedTimestamp");
+            builder.Entity<UserNewsletter>().Property<DateTime>("UpdatedTimestamp");
             //colocar as demais tabelas aqui
             
             base.OnModelCreating(builder);
@@ -40,6 +44,7 @@ namespace tiqe_web.Models
             ChangeTracker.DetectChanges();
             
             updateUpdatedProperty<User>();
+            updateUpdatedProperty<UserNewsletter>();
             //colocar as demais tabelas aqui
             
             return base.SaveChanges();
