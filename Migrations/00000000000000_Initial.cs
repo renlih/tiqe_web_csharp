@@ -11,7 +11,7 @@ namespace tiqe_web.Migrations
             migrationBuilder.CreateTable(
                 name: "TB_User",
                 columns: table => new{
-                    ID_TiqeUser = table.Column<int>(nullable: false),
+                    TiqeUserId = table.Column<int>(nullable: false),
                     Picture = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: false),
@@ -28,7 +28,7 @@ namespace tiqe_web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IdentityUser", x => x.ID_TiqeUser);
+                    table.PrimaryKey("PK_IdentityUser", x => x.TiqeUserId);
                 });
             
             

@@ -48,8 +48,8 @@ namespace tiqe_web.Models
     
     public class UserNewsletter 
     {
-        public int ID_UserNewsletter { get; set; }
-        public int ID_TiqeUser { get; set; }
+        public int UserNewsletterId { get; set; }
+        public User TiqeUserId { get; set; }
         public bool Receiver { get; set; }
         public DateTime ReceiverRegisterDate { get; set; }
         public DateTime ModifyDate { get; set; }

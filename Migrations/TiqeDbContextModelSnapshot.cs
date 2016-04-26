@@ -3,11 +3,11 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using tiqe_web.Models;
 
-//apagar esta classe assim que a TiqeDbContextModelSnapshot for finalizada
+//ver como isso funciona direitinho
 namespace tiqe_web.Migrations
 {
     [DbContext(typeof(TiqeDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class TiqeDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
