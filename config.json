@@ -1,6 +1,6 @@
 {
 	"Data": {
-		"DefaultConnection": {
+		"DataAccessPostgreSqlProvider": {
 			//"ConnectionString": "Server=localhost; Database=BD_tiqe_app; Uid=root; Pwd=ti@3_DoneByGi; Trusted_Connection=true; MultipleActiveResultSets=true;"
 			//"ConnectionString": "Driver={PostgreSQL UNICODE};Server=localhost;Port=5432;Database=BD_Tiqe;Uid=GiselleTavares;Pwd=Gigi2511;"
 			"ConnectionString": "Server=localhost;Port=5432;Database=BD_Tiqe;Uid=GiselleTavares;Pwd=Gigi2511;"

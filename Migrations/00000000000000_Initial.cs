@@ -40,7 +40,7 @@ namespace tiqe_web.Migrations
             
             
             //daqui para baixo é para apagar posteriormente
-            migrationBuilder.CreateTable(
+            /*migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -165,18 +165,18 @@ namespace tiqe_web.Migrations
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
                 table: "AspNetUsers",
-                column: "NormalizedUserName");
+                column: "NormalizedUserName");*/
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable("TB_User");
-            migrationBuilder.DropTable("AspNetRoleClaims");
+            /*migrationBuilder.DropTable("AspNetRoleClaims");
             migrationBuilder.DropTable("AspNetUserClaims");
             migrationBuilder.DropTable("AspNetUserLogins");
             migrationBuilder.DropTable("AspNetUserRoles");
             migrationBuilder.DropTable("AspNetRoles");
-            migrationBuilder.DropTable("AspNetUsers");
+            migrationBuilder.DropTable("AspNetUsers");*/
         }
     }
 }

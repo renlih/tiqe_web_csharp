@@ -7,8 +7,7 @@ namespace tiqe_web.Models
     [Table("TB_User")]
     public class User
 	{
-        [Column("ID_TiqeUser")]
-        public int Id { get; set; }
+        public int TiqeUserId { get; set; }
         
         [StringLength(300)]
         public string Picture { get; set; }

@@ -30,22 +30,38 @@ namespace tiqe_web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
-                //.AddSqlite()
                 .AddNpgsql()
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<TiqeDbContext>();
+                //.AddDbContext<ApplicationDbContext>(options =>
                     //options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
-                    options.UseNpgsql(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    //options.UseNpgsql(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            JsonOutputFormatter jsonOutputFormatter = new JsonOutputFormatter
+            {
+                SerializerSettings = new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                }
+            };
+            
             // Add Identity services to the services container.
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
 
             // Add MVC services to the services container.
-            services.AddMvc();
+            services.AddMvc(
+                options =>
+                {
+                    options.OutputFormatters.Clear();
+                    options.OutputFormatters.Insert(0, jsonOutputFormatter);
+                }
+            );
+
+            services.AddScoped<IDataAccessProvider, DataAccessPostgreSqlProvider>();
 
             // Register application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
+            //services.AddTransient<IEmailSender, AuthMessageSender>();
             //services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 

@@ -7,12 +7,13 @@ namespace tiqe_web.Models
 {
     public class TiqeDbContext : DbContext
 	{
-		public DbSet<User> Users { get; set; }
+		//criar uma classe dessa para cada tabela. deixar essa aqui para que seja herdada.
+        public DbSet<User> Users { get; set; }
         //colocar as demais tabelas aqui
 		
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<User>().HasKey(m => m.Id);
+            builder.Entity<User>().HasKey(m => m.TiqeUserId);
             //colocar as demais tabelas aqui
             
             builder.Entity<User>().Property<DateTime>("UpdatedTimestamp");
@@ -29,7 +30,7 @@ namespace tiqe_web.Models
             
             var configuration = builder.Build();
             
-            var sqlConnectionString = configuration["DefaultConnection:ConnectionString"];
+            var sqlConnectionString = configuration["DataAccessPostgreSqlProvider:ConnectionString"];
             
             optionsBuilder.UseNpgsql(sqlConnectionString);
 		}
