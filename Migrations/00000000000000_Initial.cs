@@ -44,7 +44,7 @@ namespace tiqe_web.Migrations
                 constraints: table =>
                 {
                     //esse PK_IdentityRole não é da aplicação. ver como isso funciona.
-                    table.PrimaryKey("PK_UserNewsletter" ,x => x.TiqeUserId);
+                    table.PrimaryKey("PK_UserNewsletter",x => x.TiqeUserId);
                 });
              
             
