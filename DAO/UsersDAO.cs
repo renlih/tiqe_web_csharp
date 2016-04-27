@@ -6,7 +6,15 @@ using tiqe_web.Models;
 
 namespace tiqe_web.DAO
 {
-	/*public class UsersDAO : DataAccessPostgreSqlProvider
+	public class UsersDAO
+	{
+		public void add(User user)
+		{
+			
+		}
+	}
+    
+    /*public class UsersDAO : DataAccessPostgreSqlProvider
 	{
 		  public void AddUser(User user){
             _context.Users.Add(user);

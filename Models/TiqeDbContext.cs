@@ -29,7 +29,7 @@ namespace tiqe_web.Models
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			var builder = new ConfigurationBuilder()
-            .AddJsonFile("../config.json")
+            .AddJsonFile("config.json")
             .AddEnvironmentVariables();
             
             var configuration = builder.Build();
