@@ -50,6 +50,8 @@ namespace tiqe_web.Models
         [Timestamp]
         public DateTime ModifyDate { get; set; }
         
-        public virtual List<User> Users { get; set; }	
-	}
+        public DateTime LastLogin { get; set; }
+        
+        public virtual IList<User> Users { get; set; }
+    }
 }

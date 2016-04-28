@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace tiqe_web.Models
 {
     [Table("TB_UserNewsletter")]
-    public class UserNewsletter 
+    public class UserNewsletter
     {
         [Key()]
         public int UserNewsletterId { get; set; }
@@ -22,8 +22,7 @@ namespace tiqe_web.Models
         public DateTime ModifyDate { get; set; }
         
         [ForeignKey("TiqeUserId")]
-        public User User { get; set; }
+        public virtual User User { get; set; }
         
     }
-	
 }
