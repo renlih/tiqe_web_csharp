@@ -1,13 +1,12 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Data.Entity;
+using Microsoft.AspNet.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json;
 using tiqe_web.Models;
-using tiqe_web.Services;
 
 namespace tiqe_web
 {
@@ -19,10 +18,9 @@ namespace tiqe_web
                 .SetBasePath(appEnv.ApplicationBasePath)
                 .AddJsonFile("config.json")
                 .AddEnvironmentVariables();
-                //.AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
             
             Configuration = builder.Build();
-            //Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/tiqe_web.db";
+            //para usar com o SQLite ---- Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/tiqe_web.db";
         }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -30,23 +28,33 @@ namespace tiqe_web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
-                //.AddSqlite()
                 .AddNpgsql()
-                .AddDbContext<ApplicationDbContext>(options =>
-                    //options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
-                    options.UseNpgsql(Configuration["Data:DefaultConnection:ConnectionString"]));
+                .AddDbContext<TiqeDbContext>();
 
+            //ver para quê serve isso
+            JsonOutputFormatter jsonOutputFormatter = new JsonOutputFormatter
+            {
+                SerializerSettings = new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                }
+            };
+            
             // Add Identity services to the services container.
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
 
             // Add MVC services to the services container.
-            services.AddMvc();
+            services.AddMvc(
+                options =>
+                {
+                    options.OutputFormatters.Clear();
+                    options.OutputFormatters.Insert(0, jsonOutputFormatter);
+                }
+            );
 
-            // Register application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            //services.AddTransient<ISmsSender, AuthMessageSender>();
+            //services.AddScoped<TiqeDbContext>();
         }
 
         // Configure is called after ConfigureServices is called.

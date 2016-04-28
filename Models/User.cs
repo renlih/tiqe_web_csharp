@@ -1,14 +1,15 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace tiqe_web.Models
 {
     [Table("TB_User")]
     public class User
 	{
-        [Column("ID_TiqeUser")]
-        public int Id { get; set; }
+        [Key]
+        public int TiqeUserId { get; set; }
         
         [StringLength(300)]
         public string Picture { get; set; }
@@ -27,6 +28,7 @@ namespace tiqe_web.Models
         
         [Required]
         [StringLength(20)]
+        [MaxLength(20, ErrorMessage="Password must be between 6 and 20 characters"),MinLength(6)] 
         public string Pass { get; set; }
         
         public DateTime Birthday { get; set; }
@@ -42,18 +44,15 @@ namespace tiqe_web.Models
         
         public bool SendLogError { get; set; }
         
+        [Timestamp]
         public DateTime RegisterDate { get; set; }
 
-        public DateTime ModifyDate { get; set; }	
-	}
-    
-    public class UserNewsletter 
-    {
-        public int ID_UserNewsletter { get; set; }
-        public int ID_TiqeUser { get; set; }
-        public bool Receiver { get; set; }
-        public DateTime ReceiverRegisterDate { get; set; }
+        [Timestamp]
         public DateTime ModifyDate { get; set; }
+        
+        [Timestamp]
+        public DateTime LastLogin { get; set; }
+        
+        public virtual IList<User> Users { get; set; } //ver se isso aqui é realmente necessário
     }
-	
 }
