@@ -54,7 +54,7 @@ namespace tiqe_web
                 }
             );
 
-            services.AddScoped<IDataAccessProvider, DataAccessPostgreSqlProvider>();
+            //services.AddScoped<TiqeDbContext>();
         }
 
         // Configure is called after ConfigureServices is called.

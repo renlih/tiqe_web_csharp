@@ -1,7 +1,7 @@
 {
 	"Data": {
 		"DataAccessPostgreSqlProvider": {
-			"ConnectionString": "Server=localhost;Port=5432;Database=BD_Tiqe;Uid=giselletavares;Pwd=tiqe00;"
+			"ConnectionString": "Server=localhost;Port=5432;Database=BD_Tiqe;Uid=postgres;Pwd=postgres;"
 		}
 	}
 }
