@@ -8,7 +8,7 @@ namespace tiqe_web.Models
     [Table("TB_User")]
     public class User
 	{
-        [Key()]
+        [Key]
         public int TiqeUserId { get; set; }
         
         [StringLength(300)]
@@ -50,8 +50,9 @@ namespace tiqe_web.Models
         [Timestamp]
         public DateTime ModifyDate { get; set; }
         
+        [Timestamp]
         public DateTime LastLogin { get; set; }
         
-        public virtual IList<User> Users { get; set; }
+        public virtual IList<User> Users { get; set; } //ver se isso aqui é realmente necessário
     }
 }

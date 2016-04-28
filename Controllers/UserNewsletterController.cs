@@ -15,7 +15,6 @@ namespace tiqe_web.Controllers
             
             UserNewsletter userNewsletter = new UserNewsletter()
             {
-                UserNewsletterId = 1,
                 TiqeUserId = 1,
                 Receiver = true,
                 ReceiverRegisterDate = DateTime.Now,
