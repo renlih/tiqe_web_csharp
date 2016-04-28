@@ -9,15 +9,18 @@ namespace tiqe_web.Models
 	{
         //criar uma classe dessa para cada tabela. deixar essa aqui para que seja herdada.
         public DbSet<User> Users { get; set; }
-        public DbSet<UserNewsletter> UserNewsletters { get; set; }
+        public DbSet<UserNewsletter> UsersNewsletter { get; set; }
         //colocar as demais tabelas aqui
 		
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            
+            builder.Entity<User>().HasKey(m => m.TiqeUserId);
+            builder.Entity<UserNewsletter>().HasKey(m => m.UserNewsletterId);
+            
             //Users
-            builder.Entity<User>()
-                .HasKey(m => m.TiqeUserId);
-            builder.Entity<User>()
+            //builder.Entity<User>().HasKey(m => m.TiqeUserId);
+            /*builder.Entity<User>()
                 .Property(t => t.Picture)
                 .HasMaxLength(300);
             builder.Entity<User>()
@@ -62,12 +65,11 @@ namespace tiqe_web.Models
             builder.Entity<User>()
                 .Property(t => t.ModifyDate)
                 .IsRequired()
-                .IsConcurrencyToken();   
+                .IsConcurrencyToken();   */
 
             //UserNewsletter
-            builder.Entity<UserNewsletter>()
-                .HasKey(m => m.UserNewsletterId);
-            builder.Entity<UserNewsletter>()
+            //builder.Entity<UserNewsletter>().HasKey(m => m.UserNewsletterId);
+            /*builder.Entity<UserNewsletter>()
                 .Property(t => t.TiqeUserId)
                 .IsRequired();
             builder.Entity<UserNewsletter>()
@@ -80,7 +82,7 @@ namespace tiqe_web.Models
             builder.Entity<UserNewsletter>()
                 .Property(t => t.ModifyDate)
                 .IsRequired()
-                .IsConcurrencyToken();
+                .IsConcurrencyToken();*/
             
             //entender melhor como funciona essa parte
             //builder.Entity<User>();

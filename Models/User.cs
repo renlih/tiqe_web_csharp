@@ -8,7 +8,6 @@ namespace tiqe_web.Models
     [Table("TB_User")]
     public class User
 	{
-        [Key()]
         public int TiqeUserId { get; set; }
         
         [StringLength(300)]
@@ -50,6 +49,6 @@ namespace tiqe_web.Models
         [Timestamp]
         public DateTime ModifyDate { get; set; }
         
-        public virtual List<User> Users { get; set; }	
-	}
+        public virtual List<User> Users { get; set; }
+    }
 }

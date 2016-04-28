@@ -2,21 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Data.Entity;
+using Microsoft.Extensions.Logging;
 using tiqe_web.Models;
 
 namespace tiqe_web.DAO
 {
-	public class UsersDAO
+    public class UserDAO
 	{
-		public void add(User user)
-		{
-			
-		}
-	}
-    
-    /*public class UsersDAO : DataAccessPostgreSqlProvider
-	{
-		  public void AddUser(User user){
+		  
+        private readonly TiqeDbContext _context;
+        
+        //ver para que serve isso
+        private readonly ILogger _logger;
+        
+        //ver para que serve isso
+        /*public UsersDAO(TiqeDbContext context, ILoggerFactory loggerFactory){
+            _context = context;
+            _logger = loggerFactory.CreateLogger("UsersDAO");
+        }*/
+        
+        public void AddUser(User user){
             _context.Users.Add(user);
             _context.SaveChanges();
         }
@@ -40,6 +45,6 @@ namespace tiqe_web.DAO
         public List<User> GetUsers(){
             return _context.Users.OrderByDescending(user => EF.Property<DateTime>(user, "UpdatedTimestamp")).ToList();
         }
-	}	*/
+	}	
 }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//apagar isso aqui depois que criar os DAOs
+using System.Collections.Generic;
 
 namespace tiqe_web.Models
 {

@@ -7,7 +7,6 @@ namespace tiqe_web.Models
     [Table("TB_UserNewsletter")]
     public class UserNewsletter 
     {
-        [Key()]
         public int UserNewsletterId { get; set; }
         
         [Required]
