@@ -16,7 +16,6 @@ namespace tiqe_web.Controllers
             
             User user = new User()
             {
-                TiqeUserId = 1,
                 Picture = "https://plus.google.com/u/0/me?tab=mX",
                 FirstName = "Giselle",
                 LastName = "Tavares",

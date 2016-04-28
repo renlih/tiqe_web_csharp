@@ -8,7 +8,7 @@ namespace tiqe_web.Models
     [Table("TB_User")]
     public class User
 	{
-        [Key()]
+        [Key]
         public int TiqeUserId { get; set; }
         
         [StringLength(300)]
