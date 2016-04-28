@@ -83,7 +83,7 @@ namespace tiqe_web
             app.UseStaticFiles();
 
             // Add cookie-based authentication to the request pipeline.
-            app.UseIdentity();
+            //app.UseIdentity();
 
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
@@ -95,10 +95,12 @@ namespace tiqe_web
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
             });
-        }
-        
-        public void Configure(IApplicationBuilder app){
+            
             app.UseIISPlatformHandler();
         }
+        
+        /*public void Configure(IApplicationBuilder app){
+            app.UseIISPlatformHandler();
+        }*/
     }
 }
