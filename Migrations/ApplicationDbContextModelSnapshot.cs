@@ -1,9 +1,9 @@
+//apagar esta classe assim que a TiqeDbContextModelSnapshot for criada
 using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using tiqe_web.Models;
 
-//apagar esta classe assim que a TiqeDbContextModelSnapshot for finalizada
 namespace tiqe_web.Migrations
 {
     [DbContext(typeof(TiqeDbContext))]

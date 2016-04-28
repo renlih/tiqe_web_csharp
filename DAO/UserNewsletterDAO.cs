@@ -2,24 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Data.Entity;
-using Microsoft.Extensions.Logging;
 using tiqe_web.Models;
 
 namespace tiqe_web.DAO
 {
     public class UserNewsletterDAO
 	{
-		  
         private readonly TiqeDbContext _context;
         
-        //ver para que serve isso
-        private readonly ILogger _logger;
-        
-        //ver para que serve isso
-        /*public UsersNewsletterDAO(TiqeDbContext context, ILoggerFactory loggerFactory){
+        public UserNewsletterDAO(TiqeDbContext context){
             _context = context;
-            _logger = loggerFactory.CreateLogger("UsersNewsletterDAO");
-        }*/
+        }
         
         public void AddUserNewsletter(UserNewsletter userNewsletter){
             _context.UsersNewsletter.Add(userNewsletter);
@@ -42,7 +35,7 @@ namespace tiqe_web.DAO
             return _context.UsersNewsletter.First(t => t.UserNewsletterId == UserNewsletterId);
         }
         
-        public List<UserNewsletter> GetUsersNewsletter(){
+        public IList<UserNewsletter> GetUsersNewsletter(){
             return _context.UsersNewsletter.OrderByDescending(userNewsletter => EF.Property<DateTime>(userNewsletter, "UpdatedTimestamp")).ToList();
         }
 	}	

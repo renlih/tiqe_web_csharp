@@ -12,11 +12,12 @@ namespace tiqe_web.Models
         public DbSet<UserNewsletter> UsersNewsletter { get; set; }
         //colocar as demais tabelas aqui
 		
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             
-            builder.Entity<User>().HasKey(m => m.TiqeUserId);
-            builder.Entity<UserNewsletter>().HasKey(m => m.UserNewsletterId);
+            builder.Entity<User>().HasKey(user => user.TiqeUserId);
+            builder.Entity<UserNewsletter>().HasKey(userNewsletter => userNewsletter.UserNewsletterId);
             
             //Users
             //builder.Entity<User>().HasKey(m => m.TiqeUserId);
@@ -114,7 +115,7 @@ namespace tiqe_web.Models
             optionsBuilder.UseNpgsql(sqlConnectionString);
 		}
         
-        public override int SaveChanges()
+        /*public override int SaveChanges()
         {
             ChangeTracker.DetectChanges();
             
@@ -123,9 +124,9 @@ namespace tiqe_web.Models
             //colocar as demais tabelas aqui
             
             return base.SaveChanges();
-        }
+        }*/
         
-        private void updateUpdatedProperty<T>() where T : class
+        /*private void updateUpdatedProperty<T>() where T : class
         {
             //ver direito como isso funciona. 
             var modifiedUser = ChangeTracker.Entries<T>()
@@ -136,6 +137,6 @@ namespace tiqe_web.Models
                 //aqui ele atualizaria todas as datas?? não quero assim. ver com funciona
                 entry.Property("UpdatedTimestamp").CurrentValue = DateTime.UtcNow;
             }
-        }
+        }*/
 	}
 }
