@@ -40,3 +40,16 @@ The ASP.NET Team
 * [Publish to the file system](http://go.microsoft.com/fwlink/?LinkId=518019)
 
 We would love to hear your [feedback](http://go.microsoft.com/fwlink/?LinkId=518015)
+
+Comandos para rodar os migrations:
+- dnu restore
+- dnx ef migration add Initial (tem que ter o banco criado)
+- dnx ef migration add Users
+- dnx ef database update Users -v
+
+Comando para rodar a aplicação:
+- dnu restore
+- dnx web
+
+
+
